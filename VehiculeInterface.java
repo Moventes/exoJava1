@@ -4,7 +4,4 @@ public interface VehiculeInterface {
 
     public void setNombreDeRoue(int nombreDeRoue);
 
-    public int getPuissance();
-
-    public void setPuissance(int puissance);
 }

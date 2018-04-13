@@ -1,10 +1,12 @@
-public class Voiture extends Vehicule {
+public class Voiture<MOTEUR extends Moteur> extends Vehicule {
 
     private boolean climatisation = false;
 
-    public Voiture() {
+    private MOTEUR moteur;
+
+    public Voiture(MOTEUR moteur) {
         this.setNombreDeRoue(4);
-        this.puissance = 100;
+        this.moteur = moteur;
     }
 
     public boolean hasClimatisation() {
@@ -13,5 +15,9 @@ public class Voiture extends Vehicule {
 
     public void setClimatisation(boolean climatisation) {
         this.climatisation = climatisation;
+    }
+
+    public MOTEUR getMoteur() {
+        return this.moteur;
     }
 }
